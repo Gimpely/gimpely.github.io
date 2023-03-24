@@ -18,10 +18,10 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100px;
+    width: 128px;
     height: 100%;
     background-color: #000;
-    color: #139d84;
+    color: #4a98cf;
     display: flex;
     align-items: center;
 }
@@ -33,7 +33,7 @@ nav ul {
     justify-content: flex-start;
     height: 100%;
     list-style: none;
-    padding: 40px 0 0 0;
+    padding: 28px 0 0 0;
     margin: 0;
 }
 
@@ -60,11 +60,11 @@ nav ul li a i {
   
 
 nav ul li a:hover {
-    background-color: #439b6f;
+    background-color: #4a98cf;
 }
 
 nav ul li.active a {
-    background-color: #439b6f   ;
+    background-color: #4a98cf   ;
     color: #fff;
 }
 
