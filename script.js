@@ -1,16 +1,35 @@
-function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
+const sections = document.querySelectorAll("section");
+const navLi = document.querySelectorAll("nav ul li");
 
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (pageYOffset >= sectionTop - sectionHeight / 3) {
+      current = section.getAttribute("id");
     }
+  });
 
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+  navLi.forEach((li) => {
+    li.classList.remove("active");
+    if (li.querySelector("a").getAttribute("href") === "#" + current) {
+      li.classList.add("active");
     }
+  });
+});
 
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
+navLi.forEach((li) => {
+  li.addEventListener("click", (e) => {
+    e.preventDefault();
+    const target = li.querySelector("a").getAttribute("href");
+    const targetSection = document.querySelector(target);
+    const targetSectionTop = targetSection.offsetTop;
+
+    window.scrollTo({
+        top: targetSectionTop,
+        behavior: "smooth"
+      });
+
+  });
+});
