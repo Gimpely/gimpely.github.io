@@ -2,10 +2,12 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
+    color: #fff;
 }
 
 header {
-    background-color: #333;
+    background-color: #000;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -30,7 +32,7 @@ background-color: transparent !important;
     min-height: 600px; /* set the minimum height to 300px */
     margin-right: 20px;
     margin-bottom: 20px;
-    background-color: #ffffff;
+    background-color: #1c1c1c;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -40,7 +42,7 @@ background-color: transparent !important;
     min-height: 600px; /* set the minimum height to 300px */
     margin-right: 20px;
     margin-bottom: 20px;
-    background-color: #ffffff;
+    background-color: #1c1c1c;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -48,7 +50,7 @@ div {
     flex-basis: calc(50% - 20px);
     margin-right: 20px;
     margin-bottom: 20px;
-    background-color: #9a9a9a;
+    background-color:#333333 !important;;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -58,48 +60,47 @@ div:last-child {
 }
 
 a {
-    color: #33333d;
-    text-decoration: none;
-    font-weight: bold;
+    color:#ffffff !important;;
+    text-decoration:none !important;;
 }
 
 a:hover {
-    color: #29824b;
+color:#ffffff !important;;
 }
 
 .tabcontent {
-    display:none; 
-    padding : 6px 12px; 
-    border : 1px solid #ffffff; 
-    border-top : none; 
+display:none; 
+padding : 6px 12px; 
+border : none; 
+border-top : none; 
 }
 
 .tabcontent:first-child {display:block;}
 
 .tablinks { 
-    background-color : #eee; 
-    margin-right : -1px; 
-    border : 1px solid #bcbcbc; 
-    border-top-left-radius : 5px; 
-    border-top-right-radius : 5px; 
-    cursor : pointer; 
-    padding : 6px 12px; 
+background-color : #bcbcbc !important;; 
+margin-right : 4px; 
+border : none; 
+border-top-left-radius : 5px; 
+border-top-right-radius : 5px; 
+cursor : pointer; 
+padding : 6px 12px; 
 }
 
-.tablinks.active {background-color:#fff;}
+.tablinks.active {background-color:#595959;}
 
 .tab {
-display: flex;
-width: 100%;
-background-color: #595959;
-padding: 20px;
-box-sizing: border-box;
+display:flex !important;;
+width:auto !important;;
+background-color:#595959 !important;;
+padding :10px !important;;
+box-sizing:border-box !important;;
 }
 
 .clearfix {
-clear: both;
-width: 100%;
-background-color: #f2f2f2;
-padding: 20px;
-box-sizing: border-box;
+clear:both !important;;
+width:auto !important;;
+background-color:#333333 !important;;
+padding :10px !important;;
+box-sizing:border-box !important;;
 }
