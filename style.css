@@ -1,24 +1,21 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: #1c1c1c;
     color: #fff;
 }
-
 section#home {
   padding-top: 20px;
 }
-
 section#about {
   padding-top: 20px;
 }
-
 nav {
     position: fixed;
     top: 0;
     left: 0;
-    width: 128px;
+    width: 135px;
     height: 100%;
     background-color: #000;
     color: #4a98cf;
@@ -36,7 +33,6 @@ nav ul {
     padding: 28px 0 0 0;
     margin: 0;
 }
-
 nav ul li {
     margin-bottom: 10px;
     width: 100%;
@@ -59,25 +55,80 @@ nav ul li a i {
   }
   
 
-nav ul li a:hover {
+  .tab-button:hover,
+  .tab-button:focus {
+    box-shadow: inset -2px -2px 5px rgba(50, 184, 161, 0.2);
+  }
+  
+  nav ul li a:hover {
+    background-color: transparent;
+    box-shadow: inset -2px -2px 5px rgba(242, 193, 255, 0.475);
+    color: #52ffe5;
+}
+
+  nav ul li.active a {
+    background-color: transparent;
+    box-shadow: inset -2px -2px 5px rgba(242, 193, 255, 0.475);
+    color: #52ffe5;
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 2px;
+    background-color: #4a98cf;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, width 0.5s ease-in-out;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    height: calc(100% - 1px);
+    width: 2px;
+    background-color: #4a98cf;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+nav ul li.active a::after,
+nav ul li a:focus::after {
+    opacity: 1;
+}
+
+nav ul li a {
+    position: relative;
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 2px;
     background-color: #4a98cf;
 }
-
-nav ul li.active a {
-    background-color: #4a98cf   ;
-    color: #fff;
+nav ul li.active a:hover::after,
+nav ul li.active a:focus::after {
+    opacity: 1;
 }
-
 main {
     margin-left: 200px;
     padding: 20px;
     box-sizing: border-box;
 }
-
 html, body {
     height: 100%;
 }
-
 section {
     height: calc(100vh - 80px);
     margin-top: 80px;
@@ -86,7 +137,6 @@ section {
 section:first-of-type {
     margin-top: 0;
 }
-
 h2 {
     margin-top: 30px;
 }

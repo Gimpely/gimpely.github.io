@@ -5,11 +5,13 @@
   <title>My Website</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link rel="stylesheet" href="custom.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 </head>
 <body>
   <nav>
     <ul>
-        <li><a href="#home"><i class="fa-solid fa-house fa-lg" style="color: #cececf;"></i></i>Home</a></li>
+      <li class="active"><a href="#home"><i class="fa-solid fa-house fa-lg" style="color: #cececf;"></i></i>Home</a></li>
       <li><a href="#about"><i class="fa-solid fa-user fa-lg" style="color: #c1c2c2;"></i></i>About</a></li>
       <li><a href="#projects"><i class="fa-solid fa-rocket fa-lg" style="color: #e3e2e4;"></i></i>Projects</a></li>
     </ul>
@@ -18,6 +20,10 @@
     <section id="home">
       <h2>Home</h2>
       <p>Welcome to my website!</p>
+      <div class="arrow-button">
+        <a href="#projects">View Projects</a>
+        <i class="fa-solid fa-arrow-down"></i>
+      </div>
     </section>
     <section id="about">
       <h2>About</h2>

@@ -1,5 +1,6 @@
 const sections = document.querySelectorAll("section");
 const navLi = document.querySelectorAll("nav ul li");
+const arrowButton = document.querySelector(".arrow-button");
 
 window.addEventListener("scroll", () => {
   let current = "";
@@ -31,5 +32,17 @@ navLi.forEach((li) => {
         behavior: "smooth"
       });
 
+  });
+});
+
+arrowButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  const target = arrowButton.querySelector("a").getAttribute("href");
+  const targetSection = document.querySelector(target);
+  const targetSectionTop = targetSection.offsetTop;
+
+  window.scrollTo({
+    top: targetSectionTop,
+    behavior: "smooth"
   });
 });
