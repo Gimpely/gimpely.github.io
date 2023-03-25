@@ -1,0 +1,70 @@
+#home {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+  }
+  
+  #home h2 {
+    margin-top: -75px;
+    font-size: 4em;
+    animation-name: fade-in;
+    animation-duration: 2s;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 5px;
+  }
+  
+  #home p {
+    font-size: 20px;
+    line-height: 1.2;
+    opacity: 0;
+    animation-name: fade-in-subtext;
+    animation-duration: 2s;
+    animation-delay: 2s; /* delay the animation until the title animation finishes */
+    animation-fill-mode: forwards; /* keep the opacity at 1 after the animation finishes */
+  }
+  
+  #home::before,
+  #home::after {
+    content: "";
+    position: absolute;
+    top: -35px;
+    bottom: 0px;
+    margin: 280px;
+    height: 10%;
+    border-left: 3px solid #f6f6f6e4;
+    animation-name: fade-in;
+    animation-duration: 1s;
+  }
+  
+  #home::before {
+    left: 10%;
+  }
+  
+  #home::after {
+    right: 10%;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+
+  }
+  @keyframes fade-in-subtext {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

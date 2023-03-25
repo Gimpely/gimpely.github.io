@@ -1,0 +1,16 @@
+.projects-section {
+    padding-top: 50px;
+
+    margin-bottom: 50px;
+    min-height: calc(100vh - 80px); /* subtract height of navbar */
+}
+  
+.projects-section h2 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin: 0 0 10px 20px;
+}
+
+.projects-section p {
+    margin: 0 0 10px 50px;
+  }

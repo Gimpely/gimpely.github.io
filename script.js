@@ -14,10 +14,10 @@ window.addEventListener("scroll", () => {
 
   navLi.forEach((li) => {
     li.classList.remove("active");
-    if (li.querySelector("a").getAttribute("href") === "#" + current) {
+    if (li.querySelector("a").textContent.toLowerCase() === current) {
       li.classList.add("active");
     }
-  });
+  });  
 });
 
 navLi.forEach((li) => {
@@ -28,10 +28,14 @@ navLi.forEach((li) => {
     const targetSectionTop = targetSection.offsetTop;
 
     window.scrollTo({
-        top: targetSectionTop,
-        behavior: "smooth"
-      });
+      top: targetSectionTop,
+      behavior: "smooth"
+    });
 
+    navLi.forEach((li) => {
+      li.classList.remove("active");
+    });
+    li.classList.add("active");
   });
 });
 
