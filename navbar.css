@@ -64,7 +64,8 @@ nav ul li a::after {
 }
 
 nav ul li.active a {
-  background-color: #7ef9f938;
+  
+  color: #7ef9f988;
 }
 
 nav ul li.active a::before {
