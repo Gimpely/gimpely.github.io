@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #fff; /* Light background */
+    color: #000; /* Dark text */
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 10px 0;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 10px;
+    text-align: center;
+}
+
+.main-container {
+    max-width: 1200px; /* Adjust this value as needed */
+    margin: 0 auto; /* This will center the container */
+    padding: 0 20px; /* This will add some space on the left and right */
+}
+
+.half-width {
+    width: 50%;
+}
+
+.skill {
+    margin: 10px 0;
+    width: 33%;
+}
+
+.progress-bar {
+    width: 100%; /* Full width */
+    height: 20px; /* Set a height for the progress bar */
+    background-color: #ddd; /* Color of unfilled part of the bar */
+}
+
+.progress-bar span.filled {
+    display: inline-block; /* Make it an inline-block element */
+    height: 100%; /* Full height */
+    background-color: #4CAF50; /* Color of filled part of the bar */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#work, #accomplishments {
+    width: 50%; /* Make each section take up half the width of the container */
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.card {
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    width: calc(100% - 10px);
+}
+
+h2 {
+    margin-left: 20px; /* Adjust this value as needed */
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #333; /* Dark background */
+        color: #fff; /* Light text */
+    }
+
+    footer {
+        background-color: #444; /* Darker background for footer */
+        color: #fff; /* Light text */
+    }
+
+    /* Add any other styles for the dark theme here */
+}
+
+/* Light theme */
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #fff; /* Light background */
+        color: #000; /* Dark text */
+    }
+
+    footer {
+        background-color: #f8f9fa; /* Lighter background for footer */
+        color: #000; /* Dark text */
+    }
+
+    /* Add any other styles for the light theme here */
+}
